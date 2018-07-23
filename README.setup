@@ -1,0 +1,43 @@
+# step 1 - tools
+
+xcode-select -p
+# xcode-select --install 
+# brew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install gpg
+command curl -sSL https://rvm.io/mpapis.asc | gpg --import 
+\curl -L https://get.rvm.io | bash -s stable
+
+source ~/.rvm/scripts/rvm
+
+#get a new terminal
+  :
+source ~/.rvm/scripts/rvm
+rvm install ruby-2.5.0
+gem -v
+gem update --system
+rvm gemset list
+rvm gemset use global
+gem list
+gem install bundler
+gem install nokogiri
+rvm use ruby-2.5.0@rails5.2 --create
+gem install rails
+rails -v
+
+# test making an app (optional)
+mkdir workspace
+cd workspace/
+mkdir myapp
+cd myapp
+rvm use ruby-2.5.0@myapp --ruby-version --create
+gem install rails
+rails new .
+
+# switch app
+git clone https://github.com/xsited/rails-multistep-form.git
+git checkout dev
+#bundler install
+#bundler update
+bundler install
+rails s
