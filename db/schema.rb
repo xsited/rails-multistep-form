@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20140813022352) do
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20140813022352) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string   "name",         limit: 255
+    t.string   "name"
     t.text     "description"
     t.decimal  "price"
     t.integer  "quantity"
