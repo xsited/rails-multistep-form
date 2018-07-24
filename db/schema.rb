@@ -61,7 +61,6 @@ ActiveRecord::Schema.define(version: 2018_07_22_000002) do
     t.string                "regions"
     t.string                "deployments"
     t.string                "hosts"
-    t.datetime              "available_at"
     t.datetime              "created_at", null: false
     t.datetime              "updated_at", null: false
   end
