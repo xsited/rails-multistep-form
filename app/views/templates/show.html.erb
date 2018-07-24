@@ -19,11 +19,12 @@
   <strong>Deployments:</strong>
   <%= @template.deployments %>
 </p>
-
 <p>
-  <strong>Category names:</strong>
-  <%= @template.categories.map(&:name).join(", ") %>
+  <strong>Networks:</strong>
+  <%= @template.networks %>
 </p>
+
+<%# @template.categories.map(&:name).join(", ") %>
 
 <p>
   <strong>Hosts:</strong>
