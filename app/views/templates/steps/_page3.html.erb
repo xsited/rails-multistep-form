@@ -1,0 +1,14 @@
+
+
+<div class="field">
+  <%= f.label :deployments %><br />
+  <%= f.text_field :deployments %>
+</div>
+
+<%= f.fields_for :hosts do |cf| %>
+  <div class="field">
+    <%= cf.label :name, "Host name (nested model field):" %><br />
+    <%= cf.text_field :name %>
+  </div>
+<% end %>
+

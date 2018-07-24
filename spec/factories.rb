@@ -1,14 +1,16 @@
 FactoryGirl.define do
 
-  factory :product do
-    name "Awesome t-shirt"
-    quantity  50
-    tags "t-shirts, fashion, tops"
-    categories { build_list :category, 1 }
+  factory :template do
+    name "Awesome template"
+    regions  "hipswitch relay host conductor conductorha"
+    deployments "hipswitch relay host conductor conductorha"
+    hosts "ubuntu centos"
+    networks "default protected"
+    # hosts { build_list :hosts, 1 }
   end
 
-  factory :category do
-    name "T-Shirts"
+  factory :host do
+    name "ubuntu"
   end
 
 end

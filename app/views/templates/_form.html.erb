@@ -1,0 +1,17 @@
+<% if @template.errors.any? %>
+  <div id="errors">
+    <ul>
+    <% @template.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for build_template(@template) do |f| %>
+  <% if params[:all].nil? %>
+    <%= render 'templates/steps/current_step', f: f %>
+  <% else %>
+    <%= render 'templates/steps/all_steps', f: f %>
+  <% end %>
+<% end %>

@@ -1,0 +1,42 @@
+<h1>Tempered Cloud Templates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Regions</th>
+      <th>Deployments</th>
+      <th>Hosts</th>
+      <th>Available at</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @templates.each do |template| %>
+    <tr>
+      <td><%= template.name %></td>
+      <td><%= template.description %></td>
+      <td><%= template.regions %></td>
+      <td><%= template.deployments %></td>
+      <td><%= template.hosts %></td>
+      <td><%= template.available_at %></td>
+
+      <td><%= link_to 'Show', template %></td>
+      <td><%= link_to 'Edit (with steps)', edit_template_path(template) %></td>
+      <td><%= link_to 'Edit (all fields)', edit_template_path(template, all: 1) %></td>
+      <td><%= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New template (with steps)', new_template_path %>
+<br>
+<%= link_to 'New template (all fields)', new_template_path(all: 1) %>

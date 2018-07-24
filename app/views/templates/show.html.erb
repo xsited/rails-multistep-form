@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @template.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @template.description %>
+</p>
+
+<p>
+  <strong>Regions:</strong>
+  <%= @template.regions %>
+</p>
+
+<p>
+  <strong>Deployments:</strong>
+  <%= @template.deployments %>
+</p>
+
+<p>
+  <strong>Category names:</strong>
+  <%= @template.categories.map(&:name).join(", ") %>
+</p>
+
+<p>
+  <strong>Hosts:</strong>
+  <%= @template.hosts %>
+</p>
+
+
+<%= link_to 'Edit', edit_template_path(@template) %> |
+<%= link_to 'Back', templates_path %>
